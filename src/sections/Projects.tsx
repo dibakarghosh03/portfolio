@@ -4,7 +4,6 @@ import musicAcademy from "@/assets/images/music-academy.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowIcon from "@/assets/icons/arrow-up-right.svg";
-import GrainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
@@ -61,17 +60,14 @@ export const ProjectsSection = () => {
           See how I transformed concepts into engaging digital experiences.
         </p>
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, index) => (
             <div
               key={project.link}
-              className="bg-gray-800 rounded-3xl relative overflow-hidden border-2 border-white/20 pt-8 px-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="bg-gray-800 rounded-3xl overflow-hidden border-2 border-white/20 pt-8 px-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky "
+              style={{
+                top: `calc(64px + ${index*48}px)`,
+              }}
             >
-              <div
-                className="absolute inset-0 -z-10 opacity-10"
-                style={{
-                  backgroundImage: `url(${GrainImage.src})`,
-                }}
-              ></div>
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
                   <div className="flex">
@@ -87,7 +83,7 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
-                      <li className="flex gap-2 text-sm md:text-base text-white/50">
+                      <li key={result.title} className="flex gap-2 text-sm md:text-base text-white/50">
                         <CheckIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
