@@ -19,37 +19,37 @@ export const HeroSection = () => {
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
         {/* <div className="size-[1420px] hero-ring"></div> */}
-        <HeroOrbit size={800} rotation={-72}>
+        <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
-        <HeroOrbit size={550} rotation={20}>
+        <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="36s" shouldSpin spinDuration="6s">
           <StarIcon className="size-12 text-emerald-300" />
         </HeroOrbit>
-        <HeroOrbit size={590} rotation={98}>
+        <HeroOrbit size={590} rotation={98} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="6s">
           <StarIcon className="size-8 text-emerald-300" />
         </HeroOrbit>
-        <HeroOrbit size={430} rotation={-14}>
+        <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration="30s" shouldSpin spinDuration="4s">
           <SparkleIcon className="size-8 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={440} rotation={80}>
+        <HeroOrbit size={440} rotation={80} shouldOrbit orbitDuration="32s" shouldSpin spinDuration="3s">
           <SparkleIcon className="size-5 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={530} rotation={175}>
+        <HeroOrbit size={530} rotation={175} shouldOrbit orbitDuration="34s" shouldSpin spinDuration="3s">
           <SparkleIcon className="size-10 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={710} rotation={145}>
+        <HeroOrbit size={710} rotation={145} shouldOrbit orbitDuration="42s" shouldSpin spinDuration="3s">
           <SparkleIcon className="size-15 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={720} rotation={-30}>
+        <HeroOrbit size={720} rotation={-30} shouldOrbit orbitDuration="44s">
           <div className="size-4 rounded-full bg-emerald-300/30"></div>
         </HeroOrbit>
-        <HeroOrbit size={720} rotation={-30}>
+        <HeroOrbit size={720} rotation={-30} shouldOrbit orbitDuration="46s">
           <div className="size-4 rounded-full bg-emerald-300/30"></div>
         </HeroOrbit>
-        <HeroOrbit size={600} rotation={130}>
+        <HeroOrbit size={600} rotation={130} shouldOrbit orbitDuration="40s">
           <div className="size-3 rounded-full bg-emerald-300/20"></div>
         </HeroOrbit>
-        <HeroOrbit size={820} rotation={100}>
+        <HeroOrbit size={820} rotation={100} shouldOrbit orbitDuration="50s">
           <div className="size-3 rounded-full bg-emerald-300/20"></div>
         </HeroOrbit>
       </div>
@@ -61,7 +61,9 @@ export const HeroSection = () => {
             alt="Person peeking from behind a computer"
           />
           <div className="bg-gray-950 border-gray-800 px-4 py-1.5 inline-flex items-center gap-x-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="absolute inset-0 rounded-full bg-green-500 animate-ping-large"></div>
+            </div>
             <div className="text-sm font-medium">
               Available for new projects
             </div>
