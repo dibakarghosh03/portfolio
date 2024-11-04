@@ -87,7 +87,7 @@ export const HeroSection = () => {
           </button>
           <a href="https://linkedin.com/in/dibakar-ghosh-7227052b5" target="__blank" className="inline-flex items-center gap-x-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             <span className="text-xl">👋</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
           </a>
         </div>
       </div>
