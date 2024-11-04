@@ -3,28 +3,29 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 const footerLinks = [
   {
     title: 'Linkedin',
-    href: '',
+    href: 'https://linkedin.com/in/dibakar-ghosh-7227052b5',
   },
   {
     title: 'Facebook',
-    href: '',
+    href: 'https://www.facebook.com/people/Dibakar-Ghosh/pfbid02adwqw8ibMyC9eyvoRaL3UUhbHZ7hM2Eo1e9vGxhuYvwYt7o9xXjFerUJ7ju1m5n4l/',
   },
   {
     title: 'Github',
-    href: '',
+    href: 'https://github.com/dibakarghosh03',
   },
 ]
 
 export const Footer = () => {
   return (
-    <footer className="relative -z-10 overflow-x-clip">
-      <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10"></div>
-      <div className="container">
+    <div className="relative overflow-x-clip">
+    <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-20"></div>
+    <footer className="relative ">
+      <div className="container relative z-10">
         <div className="border-t border-white/20 py-6 text-sm flex flex-col md:flex-row md:justify-between gap-8 items-center">
           <div className="text-white/40">&copy; 2024. All rights reserved.</div>
-          <nav className="flex flex-col md:flex-row items-center gap-8">
+          <nav className="flex flex-col md:flex-row items-center gap-8 ">
             {footerLinks.map((link) => (
-              <a href={link.href} className="inline-flex items-center gap-1.5">
+              <a key={link.title} href={link.href} target="__blank" className="inline-flex items-center gap-1.5">
                 <span className="font-semibold">{link.title}</span>
                 <ArrowUpRightIcon className="size-4" />
               </a>
@@ -33,5 +34,6 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
