@@ -3,17 +3,17 @@ import trimmrr from "@/assets/images/url-shortner.png";
 import musicAcademy from "@/assets/images/music-academy.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
-import ArrowIcon from "@/assets/icons/arrow-up-right.svg";
+import LiveSiteBtn from "@/components/LiveSiteBtn";
 
 const portfolioProjects = [
   {
     company: "Codenotion",
     year: "2024",
-    title: "Codenotion Landing Page",
+    title: "Codenotion",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "ReactJS, Express, MongoDB" },
+      { title: "JWT Authentication & Authorization" },
+      { title: "RazorPay integration" },
     ],
     link: "https://codenotion-seven.vercel.app/",
     image: codenotion,
@@ -23,9 +23,8 @@ const portfolioProjects = [
     year: "2024",
     title: "Music Academy Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "NextJS App Router" },
+      { title: "Aceternity UI Library" },
     ],
     link: "https://music-academy-olive.vercel.app/",
     image: musicAcademy,
@@ -33,11 +32,11 @@ const portfolioProjects = [
   {
     company: "Trimmrr",
     year: "2024",
-    title: "Trimmrr Landing Page",
+    title: "Trimmrr - URL Shortner",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "ReactJS, NodeJS" },
+      { title: "Shadcn UI" },
+      { title: "Supabase" },
     ],
     link: "https://trimmrr.netlify.app/",
     image: trimmrr,
@@ -90,10 +89,7 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
                   <a href={project.link} target="__blank">
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
-                      <ArrowIcon className="size-4" />
-                    </button>
+                    <LiveSiteBtn />
                   </a>
                 </div>
                 <div className="relative">

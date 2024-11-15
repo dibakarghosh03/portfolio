@@ -1,10 +1,11 @@
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import ConnectBtn from "@/components/ConnectBtn";
+import ExploreBtn from "@/components/ExploreBtn";
 
 export const HeroSection = () => {
   return (
@@ -81,14 +82,8 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 ">
-          <button className="inline-flex items-center gap-x-2 border border-white/15 px-6 h-12 rounded-xl">
-            <a href="#projects" className="font-semibold">Explore My Work</a>
-            <ArrowDown className="size-4" />
-          </button>
-          <a href="https://linkedin.com/in/dibakar-ghosh-7227052b5" target="__blank" className="inline-flex items-center gap-x-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span className="text-xl">👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </a>
+          <ExploreBtn />
+          <ConnectBtn />
         </div>
       </div>
     </section>
